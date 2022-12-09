@@ -2,7 +2,7 @@ import { DataItem, IRuntime, sha256, Validator } from "@kyvejs/protocol";
 
 import { name, version } from "../package.json";
 import { fetchBlock, fetchBlockHash } from "./utils";
-
+//test
 export default class Bitcoin implements IRuntime {
   public name = name;
   public version = version;
