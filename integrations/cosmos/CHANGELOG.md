@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-beta.1](https://github.com/RuslanGlaznyov/kyvejs/compare/@kyvejs/cosmos@1.0.0-beta.0...@kyvejs/cosmos@1.0.0-beta.1) (2022-12-09)
+
+### Features
+
+- test commit ([cf74e7d](https://github.com/RuslanGlaznyov/kyvejs/commit/cf74e7dc3f813ec62dc4d46ed1a88aa9bb50197c))
+
 # 1.0.0-beta.0 (2022-12-07)
 
 ### Features
