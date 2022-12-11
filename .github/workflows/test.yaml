@@ -4,10 +4,10 @@ on:
 
 jobs:
   tests:
+    needs: [lint-checks, unit-tests]
     runs-on: ubuntu-latest
     steps:
       - name: Cypress tests ✅
-        if: ${{ success() }}
         run: |
           curl --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
@@ -15,7 +15,7 @@ jobs:
           --header 'content-type: application/json' \
           --data '{
           "context": "integration build",
-          "state": "failure",
+          "state": "success",
           "description": "Cypress tests passed",
           "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           }'
