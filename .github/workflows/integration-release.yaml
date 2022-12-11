@@ -85,7 +85,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Reference: https://github.com/bahmutov/eleventy-example/blob/main/.github/workflows/ci.yml#L27
+      - name: print github id
+        run: echo ${{ github.run_id }}
       - name: Cypress tests ✅
         if: ${{ success() }}
         run: |
