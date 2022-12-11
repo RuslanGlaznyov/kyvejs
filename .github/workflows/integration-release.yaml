@@ -86,10 +86,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Reference: https://github.com/bahmutov/eleventy-example/blob/main/.github/workflows/ci.yml#L27
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Integration release check ✅
+      - name: Cypress tests ✅
         if: ${{ success() }}
         run: |
           curl --request POST \
@@ -97,12 +94,12 @@ jobs:
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           --header 'content-type: application/json' \
           --data '{
-            "context": "build",
-            "state": "success",
-            "description": "Integration release passed",
-            "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-            }'
-      - name: Integration release check 🚨
+          "context": "build",
+          "state": "success",
+          "description": "Cypress tests passed",
+          "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          }'
+      - name: Cypress tests 🚨
         if: ${{ failure() }}
         run: |
           curl --request POST \
@@ -112,6 +109,6 @@ jobs:
           --data '{
             "context": "build",
             "state": "failure",
-            "description": "Integration release failed",
+            "description": "Cypress tests failed",
             "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           }'
