@@ -3,7 +3,7 @@ name: Build check
 on:
   - pull_request
 env:
-  PKG_CACHE_PATH: /home/runner/work/kyvejs/kyvejs/.pkg-cache
+  PKG_CACHE_PATH: /home/runner/work/kyvejs/kyvejs
 jobs:
   build-check:
     runs-on: ubuntu-latest
@@ -21,6 +21,5 @@ jobs:
       - name: check dirs
         run: ls -a /home/runner/work/kyvejs/kyvejs/
       - name: "build:binaries"
-        env:
-          PKG_CACHE_PATH: /home/runner/work/kyvejs/kyvejs/.pkg-cache
+        working-directory: .
         run: yarn build:binaries
