@@ -7,7 +7,6 @@ env:
 jobs:
   build-check:
     runs-on: ubuntu-latest
-    set:
     steps:
       - name: "checkout repo"
         uses: actions/checkout@v3
