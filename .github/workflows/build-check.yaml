@@ -3,7 +3,7 @@ name: Build check
 on:
   - pull_request
 env:
-  DAY_OF_WEEK: /home/runner/work/kyvejs/kyvejs/.pkg-cache
+  PKG_CACHE_PATH: /home/runner/work/kyvejs/kyvejs/.pkg-cache
 jobs:
   build-check:
     runs-on: ubuntu-latest
