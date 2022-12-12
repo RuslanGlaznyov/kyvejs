@@ -13,5 +13,11 @@ jobs:
         run: npm install --global yarn
       - name: "setup"
         run: yarn setup
+      - name: check dirs
+        run: ls -a
+      - name: create pkg dir
+        run: mkdir .pkg-cache/v3.4/
+      - name: check dirs
+        run: ls -a
       - name: "build:binaries"
         run: yarn build:binaries
