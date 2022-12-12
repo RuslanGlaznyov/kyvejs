@@ -7,7 +7,7 @@ export default class Bitcoin implements IRuntime {
   public name = name;
   public version = version;
 
-  async 1getDataItem(
+  async 12getDataItem(
     v: Validator,
     source: string,
     key: string
