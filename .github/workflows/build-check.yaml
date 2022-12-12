@@ -19,7 +19,5 @@ jobs:
         run: npm install --global yarn
       - name: "setup"
         run: yarn setup
-      - name: build check
-        run: yarn build
       - name: "build:binaries"
         run: yarn build:binaries
