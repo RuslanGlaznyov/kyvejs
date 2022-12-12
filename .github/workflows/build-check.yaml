@@ -19,7 +19,7 @@ jobs:
       - name: check folder
         run: pwd
       - name: check dirs
-        run: ls /home/runner/work/kyvejs/kyvejs/.pkg-cache/v3.4/
+        run: ls /home/runner/work/kyvejs/kyvejs/.pkg-cache
       - name: "build:binaries"
         env:
           PKG_CACHE_PATH: /home/runner/work/kyvejs/kyvejs/.pkg-cache
