@@ -2,10 +2,12 @@ name: Build check
 
 on:
   - pull_request
-
+env:
+  DAY_OF_WEEK: /home/runner/work/kyvejs/kyvejs/.pkg-cache
 jobs:
   build-check:
     runs-on: ubuntu-latest
+    set:
     steps:
       - name: "checkout repo"
         uses: actions/checkout@v3
@@ -18,7 +20,7 @@ jobs:
       - name: check folder
         run: pwd
       - name: create pkg dir
-        run: mkdir -p .pkg-cache/v3.4/
+        run: mkdir -p /home/runner/work/kyvejs/kyvejs/.pkg-cache/v3.4/
       - name: check dirs
         run: ls -a
       - name: "build:binaries"
