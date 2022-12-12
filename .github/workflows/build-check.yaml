@@ -21,6 +21,8 @@ jobs:
       - name: create pkg dir
         run: mkdir -p /home/runner/work/kyvejs/kyvejs/.pkg-cache/v3.4/
       - name: check dirs
-        run: ls /home/runner/work/kyvejs/kyvejs/.pkg-cache
+        run: ls /home/runner/work/kyvejs/kyvejs/.pkg-cache/v3.4/
       - name: "build:binaries"
+        env:
+          PKG_CACHE_PATH: /home/runner/work/kyvejs/kyvejs/.pkg-cache
         run: yarn build:binaries
