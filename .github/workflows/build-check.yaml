@@ -18,8 +18,6 @@ jobs:
         run: ls -a
       - name: check folder
         run: pwd
-      - name: create pkg dir
-        run: mkdir -p /home/runner/work/kyvejs/kyvejs/.pkg-cache/v3.4/
       - name: check dirs
         run: ls /home/runner/work/kyvejs/kyvejs/.pkg-cache/v3.4/
       - name: "build:binaries"
